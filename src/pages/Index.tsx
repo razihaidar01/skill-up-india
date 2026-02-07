@@ -8,6 +8,7 @@ import { CareerSection } from "@/components/CareerSection";
 import { WhyChooseSection } from "@/components/WhyChooseSection";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
+import { AIChatWidget } from "@/components/AIChatWidget";
 
 const Index = () => {
   return (
@@ -24,6 +25,7 @@ const Index = () => {
         <ContactSection />
       </main>
       <Footer />
+      <AIChatWidget />
     </div>
   );
 };
