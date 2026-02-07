@@ -6,9 +6,11 @@ import { GovernmentSchemes } from "@/components/GovernmentSchemes";
 import { CertificationSection } from "@/components/CertificationSection";
 import { CareerSection } from "@/components/CareerSection";
 import { WhyChooseSection } from "@/components/WhyChooseSection";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 import { AIChatWidget } from "@/components/AIChatWidget";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const Index = () => {
   return (
@@ -22,10 +24,12 @@ const Index = () => {
         <CertificationSection />
         <CareerSection />
         <WhyChooseSection />
+        <TestimonialsSection />
         <ContactSection />
       </main>
       <Footer />
       <AIChatWidget />
+      <WhatsAppButton />
     </div>
   );
 };

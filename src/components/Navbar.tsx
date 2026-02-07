@@ -70,7 +70,7 @@ export function Navbar() {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-3">
-            <a href="tel:+919999999999" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
+            <a href="tel:+917004216219" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
               <Phone className="h-4 w-4" />
               <span className="font-hindi">कॉल करें</span>
             </a>
