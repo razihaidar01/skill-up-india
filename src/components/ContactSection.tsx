@@ -175,20 +175,26 @@ export function ContactSection() {
                   </div>
                 </a>
 
-                <a
-                  href="tel:+919999999999"
-                  className="flex items-start gap-4 p-3 rounded-xl hover:bg-muted transition-colors group"
-                >
+                <div className="flex items-start gap-4 p-3 rounded-xl">
                   <div className="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
                     <Phone className="h-5 w-5 text-accent" />
                   </div>
-                  <div>
-                    <p className="font-medium text-foreground group-hover:text-accent transition-colors">
-                      +91 XXXXX XXXXX
-                    </p>
+                  <div className="space-y-1">
+                    <a
+                      href="tel:+917004216219"
+                      className="block font-medium text-foreground hover:text-accent transition-colors"
+                    >
+                      +91 7004216219
+                    </a>
+                    <a
+                      href="tel:+919942115058"
+                      className="block font-medium text-foreground hover:text-accent transition-colors"
+                    >
+                      +91 9942115058
+                    </a>
                     <p className="font-hindi text-sm text-muted-foreground">कॉल करें</p>
                   </div>
-                </a>
+                </div>
 
                 <a
                   href="mailto:info@siat.edu.in"
