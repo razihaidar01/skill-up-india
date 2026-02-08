@@ -7,10 +7,10 @@
 @layer base {
   :root {
     /* SIAT Brand Colors - Navy, Gold, Teal */
-    --background: 210 20% 98%;
+    --background: 220 18% 96%;
     --foreground: 220 40% 13%;
 
-    --card: 0 0% 100%;
+    --card: 220 10% 99%;
     --card-foreground: 220 40% 13%;
 
     --popover: 0 0% 100%;
@@ -25,7 +25,7 @@
     --secondary-foreground: 220 40% 13%;
 
     /* Cream - Muted */
-    --muted: 45 30% 96%;
+    --muted: 40 25% 94%;
     --muted-foreground: 220 20% 40%;
 
     /* Teal - Accent (tech feel) */
@@ -35,16 +35,24 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 20% 88%;
-    --input: 220 20% 88%;
+    --border: 220 15% 87%;
+    --input: 220 15% 87%;
     --ring: 220 56% 23%;
+
+    /* Section backgrounds */
+    --section-warm: 40 30% 95%;
+    --section-navy: 220 30% 95%;
+    --section-teal: 166 20% 95%;
 
     --radius: 0.75rem;
 
     /* Custom gradients */
     --gradient-hero: linear-gradient(135deg, hsl(220 56% 23%) 0%, hsl(220 40% 35%) 50%, hsl(166 72% 28%) 100%);
     --gradient-gold: linear-gradient(135deg, hsl(45 70% 47%) 0%, hsl(40 60% 55%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(45 30% 98%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(220 10% 99%) 0%, hsl(40 25% 97%) 100%);
+    --gradient-section-warm: linear-gradient(180deg, hsl(40 30% 95%) 0%, hsl(40 20% 97%) 100%);
+    --gradient-section-navy: linear-gradient(180deg, hsl(220 30% 95%) 0%, hsl(220 20% 97%) 100%);
+    --gradient-section-teal: linear-gradient(180deg, hsl(166 20% 95%) 0%, hsl(166 15% 97%) 100%);
 
     /* Shadows */
     --shadow-sm: 0 2px 8px -2px hsl(220 20% 20% / 0.08);
@@ -140,6 +148,18 @@
 
   .gradient-card {
     background: var(--gradient-card);
+  }
+
+  .section-bg-warm {
+    background: var(--gradient-section-warm);
+  }
+
+  .section-bg-navy {
+    background: var(--gradient-section-navy);
+  }
+
+  .section-bg-teal {
+    background: var(--gradient-section-teal);
   }
 
   .shadow-card {

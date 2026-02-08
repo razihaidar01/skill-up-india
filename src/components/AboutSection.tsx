@@ -39,7 +39,7 @@ export function AboutSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="py-20 md:py-32 bg-muted/50" ref={ref}>
+    <section id="about" className="py-20 md:py-32 section-bg-navy" ref={ref}>
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
