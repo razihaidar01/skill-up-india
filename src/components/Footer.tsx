@@ -1,13 +1,15 @@
 import { MapPin, Phone, Mail, Facebook, Instagram, Youtube, Twitter } from "lucide-react";
+import { Link } from "react-router-dom";
 import siatLogo from "@/assets/siat-logo.jpeg";
 
 const quickLinks = [
-  { name: "Home", nameHi: "होम", href: "#home" },
-  { name: "About", nameHi: "हमारे बारे में", href: "#about" },
-  { name: "Courses", nameHi: "कोर्स", href: "#courses" },
-  { name: "Certification", nameHi: "प्रमाणपत्र", href: "#certification" },
-  { name: "Career", nameHi: "करियर", href: "#career" },
-  { name: "Contact", nameHi: "संपर्क", href: "#contact" },
+  { name: "Home", nameHi: "होम", href: "/" },
+  { name: "About", nameHi: "हमारे बारे में", href: "/about" },
+  { name: "Courses", nameHi: "कोर्स", href: "/courses" },
+  { name: "Certification", nameHi: "प्रमाणपत्र", href: "/certification" },
+  { name: "Career", nameHi: "करियर", href: "/career" },
+  { name: "Gallery", nameHi: "गैलरी", href: "/gallery" },
+  { name: "Contact", nameHi: "संपर्क", href: "/contact" },
 ];
 
 const courses = [
@@ -32,7 +34,7 @@ export function Footer() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {/* Brand */}
             <div className="lg:col-span-1">
-              <div className="flex items-center gap-3 mb-4">
+              <Link to="/" className="flex items-center gap-3 mb-4">
                 <img
                   src={siatLogo}
                   alt="SIAT Logo"
@@ -42,7 +44,7 @@ export function Footer() {
                   <h3 className="font-heading font-bold text-lg">SIAT</h3>
                   <p className="text-xs opacity-80">Saharsa Institute of Advance Technology</p>
                 </div>
-              </div>
+              </Link>
               <p className="text-sm opacity-80 mb-4">
                 Skill Today. Earn Tomorrow. Government-linked technical education.
               </p>
@@ -59,12 +61,12 @@ export function Footer() {
               <ul className="space-y-2">
                 {quickLinks.map((link) => (
                   <li key={link.name}>
-                    <a
-                      href={link.href}
+                    <Link
+                      to={link.href}
                       className="text-sm opacity-80 hover:opacity-100 hover:underline transition-opacity"
                     >
                       {link.name} <span className="font-hindi text-xs">({link.nameHi})</span>
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -78,14 +80,14 @@ export function Footer() {
               <ul className="space-y-2">
                 {courses.map((course) => (
                   <li key={course.name}>
-                    <a
-                      href="#courses"
+                    <Link
+                      to="/courses"
                       className="text-sm opacity-80 hover:opacity-100 hover:underline transition-opacity"
                     >
                       {course.name}
                       <br />
                       <span className="font-hindi text-xs">{course.nameHi}</span>
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
