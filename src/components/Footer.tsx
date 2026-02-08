@@ -110,7 +110,7 @@ export function Footer() {
                 </li>
                 <li className="flex items-center gap-2 text-sm opacity-80">
                   <Mail className="h-4 w-4 flex-shrink-0" />
-                  <span>info@siat.edu.in</span>
+                  <a href="mailto:siat.sws@gmail.com" className="hover:underline">siat.sws@gmail.com</a>
                 </li>
               </ul>
 

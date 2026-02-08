@@ -5,7 +5,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from "@emailjs/browser";
 import siatLogo from "@/assets/siat-logo.jpeg";
+
+const EMAILJS_SERVICE_ID = "service_w6ezbl6";
+const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID"; // TODO: Replace with your EmailJS Template ID
+const EMAILJS_PUBLIC_KEY = "bp7IsGDquJOuw1BUW";
 
 export function ContactSection() {
   const ref = useRef(null);
@@ -18,17 +23,44 @@ export function ContactSection() {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Enquiry Submitted! • पूछताछ भेज दी गई!",
-      description: "We will contact you soon. हम जल्द ही आपसे संपर्क करेंगे।",
-    });
-    setFormData({ name: "", phone: "", email: "", message: "" });
+    setIsSubmitting(true);
+
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_phone: formData.phone,
+          from_email: formData.email,
+          message: formData.message,
+          to_email: "siat.sws@gmail.com",
+        },
+        EMAILJS_PUBLIC_KEY
+      );
+
+      toast({
+        title: "Enquiry Submitted! • पूछताछ भेज दी गई!",
+        description: "We will contact you soon. हम जल्द ही आपसे संपर्क करेंगे।",
+      });
+      setFormData({ name: "", phone: "", email: "", message: "" });
+    } catch (error) {
+      toast({
+        title: "Error sending message",
+        description: "Please try again or call us directly. कृपया पुनः प्रयास करें।",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
-    <section id="contact" className="py-20 md:py-32 bg-muted/50" ref={ref}>
+    <section id="contact" className="py-20 md:py-32 section-bg-navy" ref={ref}>
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -121,10 +153,11 @@ export function ContactSection() {
                 <Button
                   type="submit"
                   size="lg"
+                  disabled={isSubmitting}
                   className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-heading rounded-full shadow-lg hover:shadow-xl transition-all group"
                 >
-                  Submit Application
-                  <Send className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  {isSubmitting ? "Sending... भेज रहे हैं..." : "Submit Application"}
+                  {!isSubmitting && <Send className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />}
                 </Button>
               </form>
             </motion.div>
@@ -197,7 +230,7 @@ export function ContactSection() {
                 </div>
 
                 <a
-                  href="mailto:info@siat.edu.in"
+                  href="mailto:siat.sws@gmail.com"
                   className="flex items-start gap-4 p-3 rounded-xl hover:bg-muted transition-colors group"
                 >
                   <div className="w-10 h-10 bg-secondary/10 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -205,7 +238,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <p className="font-medium text-foreground group-hover:text-secondary transition-colors">
-                      info@siat.edu.in
+                      siat.sws@gmail.com
                     </p>
                     <p className="font-hindi text-sm text-muted-foreground">ईमेल करें</p>
                   </div>

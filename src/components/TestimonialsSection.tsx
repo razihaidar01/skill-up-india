@@ -54,7 +54,7 @@ export function TestimonialsSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="testimonials" className="py-20 md:py-32 bg-background" ref={ref}>
+    <section id="testimonials" className="py-20 md:py-32 section-bg-warm" ref={ref}>
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
