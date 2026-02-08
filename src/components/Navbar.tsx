@@ -1,21 +1,24 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link, useLocation } from "react-router-dom";
 import siatLogo from "@/assets/siat-logo.jpeg";
 
 const navLinks = [
-  { name: "Home", nameHi: "होम", href: "#home" },
-  { name: "About", nameHi: "हमारे बारे में", href: "#about" },
-  { name: "Courses", nameHi: "कोर्स", href: "#courses" },
-  { name: "Certification", nameHi: "प्रमाणपत्र", href: "#certification" },
-  { name: "Career", nameHi: "करियर", href: "#career" },
-  { name: "Contact", nameHi: "संपर्क", href: "#contact" },
+  { name: "Home", nameHi: "होम", href: "/" },
+  { name: "About", nameHi: "हमारे बारे में", href: "/about" },
+  { name: "Courses", nameHi: "कोर्स", href: "/courses" },
+  { name: "Certification", nameHi: "प्रमाणपत्र", href: "/certification" },
+  { name: "Career", nameHi: "करियर", href: "/career" },
+  { name: "Gallery", nameHi: "गैलरी", href: "/gallery" },
+  { name: "Contact", nameHi: "संपर्क", href: "/contact" },
 ];
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,7 +42,7 @@ export function Navbar() {
       <div className="container mx-auto px-4">
         <nav className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3">
             <img
               src={siatLogo}
               alt="SIAT Logo"
@@ -53,18 +56,22 @@ export function Navbar() {
                 सहरसा इंस्टीट्यूट ऑफ एडवांस टेक्नोलॉजी
               </p>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
-                className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-primary transition-colors rounded-lg hover:bg-muted"
+                to={link.href}
+                className={`px-4 py-2 text-sm font-medium transition-colors rounded-lg hover:bg-muted ${
+                  location.pathname === link.href
+                    ? "text-primary bg-primary/5"
+                    : "text-foreground/80 hover:text-primary"
+                }`}
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -75,7 +82,7 @@ export function Navbar() {
               <span className="font-hindi">कॉल करें</span>
             </a>
             <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground font-heading rounded-full px-6 shadow-md hover:shadow-lg transition-all">
-              <a href="#contact">Apply Now</a>
+              <Link to="/contact">Apply Now</Link>
             </Button>
           </div>
 
@@ -101,20 +108,24 @@ export function Navbar() {
             <div className="container mx-auto px-4 py-4">
               <div className="flex flex-col gap-2">
                 {navLinks.map((link) => (
-                  <a
+                  <Link
                     key={link.name}
-                    href={link.href}
+                    to={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="px-4 py-3 text-foreground hover:text-primary hover:bg-muted rounded-lg transition-colors"
+                    className={`px-4 py-3 rounded-lg transition-colors ${
+                      location.pathname === link.href
+                        ? "text-primary bg-primary/5"
+                        : "text-foreground hover:text-primary hover:bg-muted"
+                    }`}
                   >
                     <span className="font-medium">{link.name}</span>
                     <span className="text-sm text-muted-foreground ml-2 font-hindi">
                       {link.nameHi}
                     </span>
-                  </a>
+                  </Link>
                 ))}
                 <Button asChild className="mt-4 bg-primary text-primary-foreground font-heading rounded-full">
-                  <a href="#contact">Apply Now - अभी अप्लाई करें</a>
+                  <Link to="/contact">Apply Now - अभी अप्लाई करें</Link>
                 </Button>
               </div>
             </div>

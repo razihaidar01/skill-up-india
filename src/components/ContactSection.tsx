@@ -9,7 +9,7 @@ import emailjs from "@emailjs/browser";
 import siatLogo from "@/assets/siat-logo.jpeg";
 
 const EMAILJS_SERVICE_ID = "service_w6ezbl6";
-const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID"; // TODO: Replace with your EmailJS Template ID
+const EMAILJS_TEMPLATE_ID = "template_fv2n1bp";
 const EMAILJS_PUBLIC_KEY = "bp7IsGDquJOuw1BUW";
 
 export function ContactSection() {

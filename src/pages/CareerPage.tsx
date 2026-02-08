@@ -1,19 +1,15 @@
 import { Navbar } from "@/components/Navbar";
-import { HeroSection } from "@/components/HeroSection";
-import { WhyChooseSection } from "@/components/WhyChooseSection";
-import { TestimonialsSection } from "@/components/TestimonialsSection";
+import { CareerSection } from "@/components/CareerSection";
 import { Footer } from "@/components/Footer";
 import { AIChatWidget } from "@/components/AIChatWidget";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
-const Index = () => {
+const CareerPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <main>
-        <HeroSection />
-        <WhyChooseSection />
-        <TestimonialsSection />
+      <main className="pt-20">
+        <CareerSection />
       </main>
       <Footer />
       <AIChatWidget />
@@ -22,4 +18,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default CareerPage;

@@ -12,6 +12,7 @@ import {
   ArrowRight 
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const courses = [
   {
@@ -129,10 +130,10 @@ export function CoursesSection() {
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-heading rounded-full px-8 shadow-lg hover:shadow-xl transition-all group"
             >
-              <a href="#contact">
+              <Link to="/contact">
                 Enroll Now - अभी दाखिला लें
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </a>
+              </Link>
             </Button>
           </motion.div>
         </div>

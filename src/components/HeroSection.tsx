@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Award, Users, Briefcase, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Background3D } from "@/components/Background3D";
+import { Link } from "react-router-dom";
 import siatLogo from "@/assets/siat-logo.jpeg";
 
 const stats = [
@@ -94,10 +95,10 @@ export function HeroSection() {
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-heading rounded-full px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all group"
             >
-              <a href="#contact">
+              <Link to="/contact">
                 Apply Now - अभी अप्लाई करें
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </a>
+              </Link>
             </Button>
             <Button
               asChild
@@ -105,9 +106,9 @@ export function HeroSection() {
               size="lg"
               className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-heading rounded-full px-8 py-6 text-lg transition-all backdrop-blur-sm"
             >
-              <a href="#courses">
+              <Link to="/courses">
                 Explore Courses - कोर्स देखें
-              </a>
+              </Link>
             </Button>
           </motion.div>
 
