@@ -39,6 +39,8 @@ export function ContactSection() {
           from_email: formData.email,
           message: formData.message,
           to_email: "siat.sws@gmail.com",
+          reply_to: formData.email || "siat.sws@gmail.com",
+          email: "siat.sws@gmail.com",
         },
         EMAILJS_PUBLIC_KEY
       );
