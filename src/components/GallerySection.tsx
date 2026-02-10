@@ -10,6 +10,15 @@ import gallery5 from "@/assets/gallery/gallery-5.jpeg";
 import gallery6 from "@/assets/gallery/gallery-6.jpeg";
 import gallery7 from "@/assets/gallery/gallery-7.jpeg";
 import gallery8 from "@/assets/gallery/gallery-8.jpeg";
+import gallery9 from "@/assets/gallery/gallery-9.jpeg";
+import gallery10 from "@/assets/gallery/gallery-10.jpeg";
+import gallery11 from "@/assets/gallery/gallery-11.jpeg";
+import gallery12 from "@/assets/gallery/gallery-12.jpeg";
+import gallery13 from "@/assets/gallery/gallery-13.jpeg";
+import gallery14 from "@/assets/gallery/gallery-14.jpeg";
+import gallery15 from "@/assets/gallery/gallery-15.jpeg";
+import gallery16 from "@/assets/gallery/gallery-16.jpeg";
+import gallery17 from "@/assets/gallery/gallery-17.jpeg";
 
 const galleryImages = [
   { src: gallery1, title: "MSME Skill Training Session", titleHi: "MSME कौशल प्रशिक्षण सत्र", category: "Training" },
@@ -20,6 +29,15 @@ const galleryImages = [
   { src: gallery6, title: "Certificate Distribution Ceremony", titleHi: "प्रमाणपत्र वितरण समारोह", category: "Events" },
   { src: gallery7, title: "Entrepreneurship Skill Program", titleHi: "उद्यमिता कौशल कार्यक्रम", category: "Events" },
   { src: gallery8, title: "Students & Faculty Gathering", titleHi: "छात्र और शिक्षक मिलन", category: "Campus" },
+  { src: gallery9, title: "MSME Certificate Distribution", titleHi: "MSME प्रमाणपत्र वितरण", category: "Events" },
+  { src: gallery10, title: "Micro-Soldering Expert at Work", titleHi: "माइक्रो-सोल्डरिंग विशेषज्ञ", category: "Lab" },
+  { src: gallery11, title: "ESDP Training Program", titleHi: "ESDP प्रशिक्षण कार्यक्रम", category: "Events" },
+  { src: gallery12, title: "ECIT Students with Kits", titleHi: "ECIT छात्र किट के साथ", category: "Campus" },
+  { src: gallery13, title: "Classroom Training Session", titleHi: "कक्षा प्रशिक्षण सत्र", category: "Classroom" },
+  { src: gallery14, title: "Students Studying Electronics", titleHi: "छात्र इलेक्ट्रॉनिक्स पढ़ रहे हैं", category: "Classroom" },
+  { src: gallery15, title: "Practical Board Repair Session", titleHi: "बोर्ड रिपेयर प्रैक्टिकल", category: "Lab" },
+  { src: gallery16, title: "Hands-On Lab Practice", titleHi: "प्रयोगशाला अभ्यास", category: "Lab" },
+  { src: gallery17, title: "Students with Certificates", titleHi: "छात्र प्रमाणपत्र के साथ", category: "Events" },
 ];
 
 const categories = ["All", "Training", "Classroom", "Lab", "Events", "Campus"];
