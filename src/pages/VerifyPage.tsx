@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, CheckCircle2, XCircle, Phone, Mail, Globe, MapPin, Shield, Award } from "lucide-react";
+import { QRCodeSVG } from "qrcode.react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/Navbar";
@@ -190,6 +191,23 @@ export default function VerifyPage() {
                       <DetailRow label="Course Incharge" value={certificate.course_incharge} />
                       <DetailRow label="Secretary" value={certificate.secretary} />
                     </div>
+
+                    {/* QR Code */}
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.5 }}
+                      className="mt-6 pt-6 border-t border-border/50 flex flex-col items-center gap-2"
+                    >
+                      <QRCodeSVG
+                        value={`https://siat.in/verify?cert=${encodeURIComponent(certificate.certificate_no)}`}
+                        size={120}
+                        level="H"
+                        includeMargin
+                        className="rounded-lg"
+                      />
+                      <p className="text-xs text-muted-foreground">Scan to verify this certificate</p>
+                    </motion.div>
                   </div>
 
                   {/* Footer */}
