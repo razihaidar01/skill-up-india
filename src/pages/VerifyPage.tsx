@@ -116,7 +116,7 @@ export default function VerifyPage() {
               className="flex gap-3"
             >
               <Input
-                placeholder="Enter Certificate No. (e.g. SIAT/2023-24/106)"
+                placeholder="Enter Certificate No."
                 value={certInput}
                 onChange={(e) => setCertInput(e.target.value)}
                 className="text-base h-12"
