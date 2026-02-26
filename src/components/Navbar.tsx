@@ -13,6 +13,7 @@ const navLinks = [
   { name: "Career", nameHi: "करियर", href: "/career" },
   { name: "Gallery", nameHi: "गैलरी", href: "/gallery" },
   { name: "Contact", nameHi: "संपर्क", href: "/contact" },
+  { name: "Verify", nameHi: "सत्यापन", href: "/verify" },
 ];
 
 export function Navbar() {
