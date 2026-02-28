@@ -13,6 +13,13 @@ import ContactPage from "./pages/ContactPage";
 import GalleryPage from "./pages/GalleryPage";
 import NotFound from "./pages/NotFound";
 import VerifyPage from "./pages/VerifyPage";
+import RHLandingPage from "./pages/rh/RHLandingPage";
+import RHServicesPage from "./pages/rh/RHServicesPage";
+import RHBusinessPage from "./pages/rh/RHBusinessPage";
+import RHPricingPage from "./pages/rh/RHPricingPage";
+import RHBlogPage from "./pages/rh/RHBlogPage";
+import RHContactPage from "./pages/rh/RHContactPage";
+import RHLoginPage from "./pages/rh/RHLoginPage";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +39,13 @@ const App = () => (
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/verify" element={<VerifyPage />} />
+          <Route path="/rhsoftware" element={<RHLandingPage />} />
+          <Route path="/rhsoftware/services" element={<RHServicesPage />} />
+          <Route path="/rhsoftware/business" element={<RHBusinessPage />} />
+          <Route path="/rhsoftware/pricing" element={<RHPricingPage />} />
+          <Route path="/rhsoftware/blog" element={<RHBlogPage />} />
+          <Route path="/rhsoftware/contact" element={<RHContactPage />} />
+          <Route path="/rhsoftware/login" element={<RHLoginPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
