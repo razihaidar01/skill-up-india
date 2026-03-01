@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -13,14 +13,31 @@ const links = [
 
 export function RHNavbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-black/70 backdrop-blur-xl">
-      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <Link to="/rhsoftware" className="text-xl font-bold tracking-tight">
-          <span className="text-white">RH</span>
-          <span className="text-cyan-400"> SOFTWARE</span>
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled
+          ? "bg-black/80 backdrop-blur-xl border-b border-white/5 shadow-[0_4px_30px_rgba(0,0,0,0.5)]"
+          : "bg-transparent"
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <Link to="/rhsoftware" className="flex items-center gap-3">
+          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center">
+            <span className="text-black font-black text-lg">RH</span>
+          </div>
+          <span className="text-xl font-bold tracking-tight text-white">
+            SOFTWARE
+          </span>
         </Link>
 
         {/* Desktop */}
@@ -32,7 +49,7 @@ export function RHNavbar() {
               className={`text-sm tracking-wide transition-colors duration-300 ${
                 location.pathname === l.href
                   ? "text-cyan-400"
-                  : "text-white/60 hover:text-white"
+                  : "text-white/50 hover:text-white"
               }`}
             >
               {l.label}
@@ -40,9 +57,9 @@ export function RHNavbar() {
           ))}
           <Link
             to="/rhsoftware/login"
-            className="text-sm px-5 py-2 rounded border border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10 transition-all duration-300"
+            className="text-sm px-6 py-2.5 rounded-lg bg-gradient-to-r from-cyan-400/10 to-blue-500/10 border border-cyan-400/20 text-cyan-400 hover:bg-cyan-400/20 transition-all duration-300"
           >
-            Login
+            Log In
           </Link>
         </div>
 
@@ -62,7 +79,7 @@ export function RHNavbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-black/95 border-t border-white/5 overflow-hidden"
+            className="md:hidden bg-black/95 backdrop-blur-xl border-t border-white/5 overflow-hidden"
           >
             <div className="px-6 py-6 flex flex-col gap-4">
               {links.map((l) => (
@@ -70,7 +87,7 @@ export function RHNavbar() {
                   key={l.href}
                   to={l.href}
                   onClick={() => setOpen(false)}
-                  className="text-sm text-white/70 hover:text-white transition-colors"
+                  className="text-sm text-white/60 hover:text-white transition-colors"
                 >
                   {l.label}
                 </Link>
@@ -80,7 +97,7 @@ export function RHNavbar() {
                 onClick={() => setOpen(false)}
                 className="text-sm text-cyan-400"
               >
-                Login
+                Log In
               </Link>
             </div>
           </motion.div>

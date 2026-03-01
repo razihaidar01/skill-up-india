@@ -28,9 +28,9 @@ const plans = [
 export default function RHPricingPage() {
   return (
     <RHLayout>
-      <section className="pt-32 pb-20 bg-black">
+      <section className="pt-32 pb-20 bg-[#050508]">
         <div className="max-w-5xl mx-auto px-6 text-center">
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-xs tracking-[0.3em] text-cyan-400/70 uppercase mb-4">
+          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-xs tracking-[0.3em] text-cyan-400/50 uppercase mb-4">
             Investment
           </motion.p>
           <motion.h1
@@ -42,7 +42,7 @@ export default function RHPricingPage() {
         </div>
       </section>
 
-      <section className="pb-28 bg-black">
+      <section className="pb-28 bg-[#050508]">
         <div className="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
           {plans.map((plan, i) => (
             <motion.div
@@ -53,21 +53,21 @@ export default function RHPricingPage() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className={`relative p-8 rounded-2xl border backdrop-blur-sm flex flex-col ${
                 plan.highlight
-                  ? "border-cyan-400/20 bg-cyan-400/[0.03]"
-                  : "border-white/[0.06] bg-white/[0.02]"
+                  ? "border-cyan-400/15 bg-gradient-to-br from-cyan-400/[0.04] to-blue-500/[0.02]"
+                  : "border-white/[0.05] bg-white/[0.02]"
               }`}
             >
               {plan.highlight && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-cyan-400 text-black text-xs font-semibold tracking-wide">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 text-black text-xs font-semibold tracking-wide">
                   Popular
                 </div>
               )}
               <h3 className="text-xl font-bold text-white tracking-tight">{plan.name}</h3>
-              <p className="text-white/40 text-sm mt-1 mb-6">{plan.description}</p>
+              <p className="text-white/35 text-sm mt-1 mb-6">{plan.description}</p>
               <p className="text-3xl font-black text-white mb-8">{plan.price}</p>
               <ul className="flex flex-col gap-3 mb-8 flex-1">
                 {plan.features.map((f) => (
-                  <li key={f} className="flex items-center gap-3 text-sm text-white/50">
+                  <li key={f} className="flex items-center gap-3 text-sm text-white/40">
                     <Check size={14} className="text-cyan-400 shrink-0" /> {f}
                   </li>
                 ))}
@@ -76,8 +76,8 @@ export default function RHPricingPage() {
                 to="/rhsoftware/contact"
                 className={`w-full text-center py-3 rounded-lg text-sm font-semibold transition-all duration-300 ${
                   plan.highlight
-                    ? "bg-cyan-400 text-black hover:bg-cyan-300"
-                    : "border border-white/10 text-white/70 hover:bg-white/5"
+                    ? "bg-gradient-to-r from-cyan-400 to-blue-500 text-black hover:shadow-[0_0_30px_rgba(34,211,238,0.2)]"
+                    : "border border-white/10 text-white/60 hover:bg-white/5"
                 }`}
               >
                 Get Started

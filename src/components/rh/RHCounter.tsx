@@ -32,14 +32,16 @@ export function RHCounter({ end, suffix = "", label }: RHCounterProps) {
   return (
     <div ref={ref} className="text-center">
       <motion.p
-        className="text-5xl md:text-6xl font-black text-white tracking-tight"
+        className="text-5xl md:text-6xl font-black tracking-tight"
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6 }}
       >
-        {count}{suffix}
+        <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+          {count}{suffix}
+        </span>
       </motion.p>
-      <p className="text-sm text-white/40 mt-2 tracking-wide uppercase">{label}</p>
+      <p className="text-sm text-white/30 mt-2 tracking-wide uppercase">{label}</p>
     </div>
   );
 }

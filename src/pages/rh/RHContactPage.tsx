@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { RHLayout } from "@/components/rh/RHLayout";
-import { Send, Phone, Mail } from "lucide-react";
+import { Send, Phone, Mail, MapPin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 export default function RHContactPage() {
@@ -21,10 +21,10 @@ export default function RHContactPage() {
 
   return (
     <RHLayout>
-      <section className="pt-32 pb-28 bg-black min-h-screen">
+      <section className="pt-32 pb-28 bg-[#050508] min-h-screen">
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-16">
-            <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-xs tracking-[0.3em] text-cyan-400/70 uppercase mb-4">
+            <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-xs tracking-[0.3em] text-cyan-400/50 uppercase mb-4">
               Let's Connect
             </motion.p>
             <motion.h1
@@ -41,7 +41,7 @@ export default function RHContactPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="p-8 rounded-2xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm flex flex-col gap-5"
+              className="p-8 rounded-2xl border border-white/[0.05] bg-gradient-to-br from-white/[0.02] to-transparent backdrop-blur-sm flex flex-col gap-5"
             >
               {[
                 { label: "Name", key: "name", type: "text" },
@@ -49,30 +49,30 @@ export default function RHContactPage() {
                 { label: "Phone", key: "phone", type: "tel" },
               ].map((field) => (
                 <div key={field.key}>
-                  <label className="text-xs text-white/40 tracking-wide uppercase mb-1.5 block">{field.label}</label>
+                  <label className="text-xs text-white/35 tracking-wide uppercase mb-1.5 block">{field.label}</label>
                   <input
                     type={field.type}
                     required={field.key !== "phone"}
                     value={form[field.key as keyof typeof form]}
                     onChange={(e) => setForm({ ...form, [field.key]: e.target.value })}
-                    className="w-full bg-white/[0.04] border border-white/[0.08] rounded-lg px-4 py-3 text-sm text-white placeholder:text-white/20 focus:outline-none focus:border-cyan-400/30 transition-colors"
+                    className="w-full bg-white/[0.03] border border-white/[0.06] rounded-lg px-4 py-3 text-sm text-white placeholder:text-white/15 focus:outline-none focus:border-cyan-400/25 focus:shadow-[0_0_15px_rgba(34,211,238,0.05)] transition-all duration-300"
                   />
                 </div>
               ))}
               <div>
-                <label className="text-xs text-white/40 tracking-wide uppercase mb-1.5 block">Project Details</label>
+                <label className="text-xs text-white/35 tracking-wide uppercase mb-1.5 block">Project Details</label>
                 <textarea
                   rows={4}
                   required
                   value={form.details}
                   onChange={(e) => setForm({ ...form, details: e.target.value })}
-                  className="w-full bg-white/[0.04] border border-white/[0.08] rounded-lg px-4 py-3 text-sm text-white placeholder:text-white/20 focus:outline-none focus:border-cyan-400/30 transition-colors resize-none"
+                  className="w-full bg-white/[0.03] border border-white/[0.06] rounded-lg px-4 py-3 text-sm text-white placeholder:text-white/15 focus:outline-none focus:border-cyan-400/25 focus:shadow-[0_0_15px_rgba(34,211,238,0.05)] transition-all duration-300 resize-none"
                 />
               </div>
               <button
                 type="submit"
                 disabled={sending}
-                className="w-full flex items-center justify-center gap-2 py-3.5 rounded-lg bg-cyan-400 text-black font-semibold text-sm tracking-wide hover:bg-cyan-300 transition-all duration-300 disabled:opacity-50"
+                className="w-full flex items-center justify-center gap-2 py-3.5 rounded-lg bg-gradient-to-r from-cyan-400 to-blue-500 text-black font-semibold text-sm tracking-wide hover:shadow-[0_0_30px_rgba(34,211,238,0.2)] transition-all duration-300 disabled:opacity-50"
               >
                 <Send size={16} /> {sending ? "Sending..." : "Send Message"}
               </button>
@@ -87,15 +87,22 @@ export default function RHContactPage() {
               <div className="flex items-start gap-4">
                 <Phone size={20} className="text-cyan-400 mt-1" />
                 <div>
-                  <p className="text-xs text-white/40 tracking-wide uppercase mb-1">Phone</p>
+                  <p className="text-xs text-white/35 tracking-wide uppercase mb-1">Phone</p>
                   <p className="text-white font-medium">+91 9342470019</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <Mail size={20} className="text-cyan-400 mt-1" />
                 <div>
-                  <p className="text-xs text-white/40 tracking-wide uppercase mb-1">Email</p>
+                  <p className="text-xs text-white/35 tracking-wide uppercase mb-1">Email</p>
                   <p className="text-white font-medium">info.razihaidar@gmail.com</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <MapPin size={20} className="text-cyan-400 mt-1" />
+                <div>
+                  <p className="text-xs text-white/35 tracking-wide uppercase mb-1">Location</p>
+                  <p className="text-white font-medium">Saharsa, Bihar, India</p>
                 </div>
               </div>
             </motion.div>
