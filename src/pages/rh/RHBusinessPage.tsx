@@ -13,9 +13,9 @@ const segments = [
 export default function RHBusinessPage() {
   return (
     <RHLayout>
-      <section className="pt-32 pb-20 bg-black">
+      <section className="pt-32 pb-20 bg-[#050508]">
         <div className="max-w-5xl mx-auto px-6 text-center">
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-xs tracking-[0.3em] text-cyan-400/70 uppercase mb-4">
+          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-xs tracking-[0.3em] text-cyan-400/50 uppercase mb-4">
             Technology Partnership
           </motion.p>
           <motion.h1
@@ -24,13 +24,13 @@ export default function RHBusinessPage() {
           >
             Built For Your Business
           </motion.h1>
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} className="mt-4 text-white/40 max-w-xl mx-auto">
+          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} className="mt-4 text-white/35 max-w-xl mx-auto">
             System-level thinking. Not design services.
           </motion.p>
         </div>
       </section>
 
-      <section className="pb-28 bg-black">
+      <section className="pb-28 bg-[#050508]">
         <div className="max-w-4xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-6">
           {segments.map((s, i) => (
             <RHGlassCard key={i} icon={s.icon} title={s.title} description={s.description} index={i} />

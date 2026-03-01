@@ -12,9 +12,9 @@ const posts = [
 export default function RHBlogPage() {
   return (
     <RHLayout>
-      <section className="pt-32 pb-20 bg-black">
+      <section className="pt-32 pb-20 bg-[#050508]">
         <div className="max-w-5xl mx-auto px-6 text-center">
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-xs tracking-[0.3em] text-cyan-400/70 uppercase mb-4">
+          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-xs tracking-[0.3em] text-cyan-400/50 uppercase mb-4">
             Insights
           </motion.p>
           <motion.h1
@@ -26,7 +26,7 @@ export default function RHBlogPage() {
         </div>
       </section>
 
-      <section className="pb-28 bg-black">
+      <section className="pb-28 bg-[#050508]">
         <div className="max-w-3xl mx-auto px-6 flex flex-col gap-6">
           {posts.map((post, i) => (
             <motion.article
@@ -35,14 +35,14 @@ export default function RHBlogPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="group p-8 rounded-2xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm hover:border-white/10 transition-all duration-300 cursor-pointer"
+              className="group p-8 rounded-2xl border border-white/[0.05] bg-gradient-to-br from-white/[0.02] to-transparent backdrop-blur-sm hover:border-cyan-400/10 transition-all duration-500 cursor-pointer"
             >
-              <p className="text-xs text-cyan-400/60 mb-2 tracking-wide">{post.date}</p>
+              <p className="text-xs text-cyan-400/50 mb-2 tracking-wide">{post.date}</p>
               <h3 className="text-xl font-bold text-white tracking-tight group-hover:text-cyan-400 transition-colors duration-300 mb-2">
                 {post.title}
               </h3>
-              <p className="text-sm text-white/40 leading-relaxed">{post.excerpt}</p>
-              <p className="text-sm text-cyan-400/60 mt-4 tracking-wide">Read More →</p>
+              <p className="text-sm text-white/35 leading-relaxed">{post.excerpt}</p>
+              <p className="text-sm text-cyan-400/50 mt-4 tracking-wide group-hover:text-cyan-400/80 transition-colors">Read More →</p>
             </motion.article>
           ))}
         </div>
