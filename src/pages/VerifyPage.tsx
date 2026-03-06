@@ -189,7 +189,7 @@ export default function VerifyPage() {
                       <DetailRow label="Overall Performance" value={certificate.performance} />
                       <DetailRow label="Date of Issue" value={certificate.issue_date} />
                       <DetailRow label="Course Incharge" value={certificate.course_incharge} />
-                      <DetailRow label="Secretary" value={certificate.secretary} />
+                      <DetailRow label="Director" value={certificate.Director} />
                     </div>
 
                     {/* QR Code */}
