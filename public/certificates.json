@@ -8,7 +8,7 @@
     "performance": "Excellent (A++)",
     "issue_date": "07-08-2024",
     "course_incharge": "Subhash Kumar",
-    "secretary": "Md Parwez Alam",
+    "secretary/Director": "Md Parwez Alam",
     "status": "Verified"
   },
   {
@@ -21,7 +21,7 @@
     "performance": "Excellent (A++)",
     "issue_date": "08-08-2016",
     "course_incharge": "Subhash Kumar",
-    "secretary": "Md Parwez Alam",
+    "secretary/Director": "Md Parwez Alam",
     "status": "Verified"
   },
   {
@@ -33,7 +33,7 @@
     "performance": "Excellent (A++)",
     "issue_date": "07-08-2025",
     "course_incharge": "Subhash Kumar",
-    "Secretary": "Md Parwez Alam",
+    "Secretary/Director": "Md Parwez Alam",
     "status": "Verified"
   }
 ]
