@@ -93,6 +93,7 @@ export default function VerifyPage() {
                   SAHARSA INSTITUTE OF ADVANCE TECHNOLOGY
                 </h1>
                 <p className="text-sm opacity-80 mt-1 font-hindi">सहरसा इंस्टीट्यूट ऑफ एडवांस टेक्नोलॉजी</p>
+                 <p className="text-xs opacity-70 mt-1">ISO Certified Institute</p>
                 <p className="text-xs opacity-70 mt-1">Baijnathpur, Saharsa | Reg. No.: SH-6061 | UDYAM: UDYAM-BR-29-0035052</p>
               </div>
               <div className="flex items-center gap-2 mt-2">
