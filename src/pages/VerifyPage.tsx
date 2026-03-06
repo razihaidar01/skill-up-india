@@ -17,7 +17,7 @@ interface CertificateRecord {
   performance: string;
   issue_date: string;
   course_incharge: string;
-  Director: string;
+  Secretary: string;
   status: string;
 }
 
@@ -189,7 +189,7 @@ export default function VerifyPage() {
                       <DetailRow label="Overall Performance" value={certificate.performance} />
                       <DetailRow label="Date of Issue" value={certificate.issue_date} />
                       <DetailRow label="Course Incharge" value={certificate.course_incharge} />
-                      <DetailRow label="Director" value={certificate.Director} />
+                      <DetailRow label="Secretary" value={certificate.Secretary} />
                     </div>
 
                     {/* QR Code */}
