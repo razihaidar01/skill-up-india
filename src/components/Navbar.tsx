@@ -9,6 +9,7 @@ const navLinks = [
   { name: "Home", nameHi: "होम", href: "/" },
   { name: "About", nameHi: "हमारे बारे में", href: "/about" },
   { name: "Courses", nameHi: "कोर्स", href: "/courses" },
+  { name: "Consultancy", nameHi: "परामर्श", href: "/consultancy" },
   { name: "Certification", nameHi: "प्रमाणपत्र", href: "/certification" },
   { name: "Career", nameHi: "करियर", href: "/career" },
   { name: "Gallery", nameHi: "गैलरी", href: "/gallery" },
