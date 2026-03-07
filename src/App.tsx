@@ -20,6 +20,7 @@ import RHPricingPage from "./pages/rh/RHPricingPage";
 import RHBlogPage from "./pages/rh/RHBlogPage";
 import RHContactPage from "./pages/rh/RHContactPage";
 import RHLoginPage from "./pages/rh/RHLoginPage";
+import RHConsultancyPage from "./pages/rh/RHConsultancyPage";
 
 const queryClient = new QueryClient();
 
