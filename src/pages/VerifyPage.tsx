@@ -17,7 +17,7 @@ interface CertificateRecord {
   performance: string;
   issue_date: string;
   course_incharge: string;
-  Secretary/Director: string;
+  "Secretary/Director": string;
   status: string;
 }
 
