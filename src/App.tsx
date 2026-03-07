@@ -21,6 +21,7 @@ import RHBlogPage from "./pages/rh/RHBlogPage";
 import RHContactPage from "./pages/rh/RHContactPage";
 import RHLoginPage from "./pages/rh/RHLoginPage";
 import RHConsultancyPage from "./pages/rh/RHConsultancyPage";
+import ConsultancyPage from "./pages/ConsultancyPage";
 
 const queryClient = new QueryClient();
 
@@ -40,6 +41,7 @@ const App = () => (
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/verify" element={<VerifyPage />} />
+          <Route path="/consultancy" element={<ConsultancyPage />} />
           <Route path="/rhsoftware" element={<RHLandingPage />} />
           <Route path="/rhsoftware/services" element={<RHServicesPage />} />
           <Route path="/rhsoftware/business" element={<RHBusinessPage />} />

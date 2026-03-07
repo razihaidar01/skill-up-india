@@ -24,13 +24,13 @@ export function ConsultancyPreview() {
             className="text-center mb-14"
           >
             <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
-              RH Software • Consultancy
+              SIAT Consultancy Services
             </span>
             <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-foreground mb-4">
-              Consultancy & <span className="text-primary">Certification</span>
+              SIAT <span className="text-primary">Consultancy</span> Services
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Government Projects, ISO Certifications (IAF & Non-IAF), and MSME Registration services powered by RH Software.
+              Government Projects, ISO Certifications (IAF & Non-IAF), MSME Registration, and Bihar Student Credit Card Yojana — powered by RH Software.
             </p>
           </motion.div>
 
@@ -83,10 +83,10 @@ export function ConsultancyPreview() {
             className="text-center"
           >
             <Link
-              to="/rhsoftware/consultancy"
+              to="/consultancy"
               className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-heading rounded-full px-8 py-3 shadow-md hover:shadow-lg transition-all"
             >
-              View All Certifications <ArrowRight className="h-4 w-4" />
+              View All Services <ArrowRight className="h-4 w-4" />
             </Link>
           </motion.div>
         </div>

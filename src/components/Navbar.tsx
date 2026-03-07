@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone, Mail } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 import siatLogo from "@/assets/siat-logo.jpeg";
@@ -9,6 +9,7 @@ const navLinks = [
   { name: "Home", nameHi: "होम", href: "/" },
   { name: "About", nameHi: "हमारे बारे में", href: "/about" },
   { name: "Courses", nameHi: "कोर्स", href: "/courses" },
+  { name: "Consultancy", nameHi: "परामर्श", href: "/consultancy" },
   { name: "Certification", nameHi: "प्रमाणपत्र", href: "/certification" },
   { name: "Career", nameHi: "करियर", href: "/career" },
   { name: "Gallery", nameHi: "गैलरी", href: "/gallery" },
@@ -79,10 +80,6 @@ export function Navbar() {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-3">
-            <a href="tel:+917004216219" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
-              <Phone className="h-4 w-4" />
-              <span className="font-hindi">कॉल करें</span>
-            </a>
             <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground font-heading rounded-full px-6 shadow-md hover:shadow-lg transition-all">
               <Link to="/contact">Apply Now</Link>
             </Button>
