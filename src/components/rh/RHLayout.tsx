@@ -10,6 +10,7 @@ interface RHLayoutProps {
 const pageTitles: Record<string, string> = {
   "/rhsoftware": "RH Software | Building the Future with AI & Smart Technology",
   "/rhsoftware/services": "Services | RH Software",
+  "/rhsoftware/consultancy": "Consultancy | RH Software",
   "/rhsoftware/business": "Business | RH Software",
   "/rhsoftware/pricing": "Pricing | RH Software",
   "/rhsoftware/blog": "Blog | RH Software",

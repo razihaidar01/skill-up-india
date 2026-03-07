@@ -20,6 +20,7 @@ import RHPricingPage from "./pages/rh/RHPricingPage";
 import RHBlogPage from "./pages/rh/RHBlogPage";
 import RHContactPage from "./pages/rh/RHContactPage";
 import RHLoginPage from "./pages/rh/RHLoginPage";
+import RHConsultancyPage from "./pages/rh/RHConsultancyPage";
 
 const queryClient = new QueryClient();
 
@@ -46,6 +47,7 @@ const App = () => (
           <Route path="/rhsoftware/blog" element={<RHBlogPage />} />
           <Route path="/rhsoftware/contact" element={<RHContactPage />} />
           <Route path="/rhsoftware/login" element={<RHLoginPage />} />
+          <Route path="/rhsoftware/consultancy" element={<RHConsultancyPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
