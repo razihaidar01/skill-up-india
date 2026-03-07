@@ -21,6 +21,7 @@ import RHBlogPage from "./pages/rh/RHBlogPage";
 import RHContactPage from "./pages/rh/RHContactPage";
 import RHLoginPage from "./pages/rh/RHLoginPage";
 import RHConsultancyPage from "./pages/rh/RHConsultancyPage";
+import ConsultancyPage from "./pages/ConsultancyPage";
 
 const queryClient = new QueryClient();
 
