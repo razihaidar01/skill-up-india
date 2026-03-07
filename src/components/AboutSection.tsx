@@ -84,7 +84,7 @@ export function AboutSection() {
               </p>
               
               {/* Mission Statement */}
-              <div className="bg-card rounded-2xl p-6 border border-border shadow-card">
+              <div className="bg-card rounded-2xl p-6 border border-border shadow-card mb-4">
                 <h4 className="font-heading font-semibold text-lg text-primary mb-2">
                   Our Mission • हमारा लक्ष्य
                 </h4>
@@ -94,6 +94,24 @@ export function AboutSection() {
                 <p className="font-hindi text-muted-foreground text-sm mt-1">
                   प्रशिक्षण → प्रमाणपत्र → नौकरी → उद्यमिता सहायता
                 </p>
+              </div>
+
+              {/* Authorization */}
+              <div className="bg-card rounded-2xl p-6 border border-border shadow-card">
+                <h4 className="font-heading font-semibold text-lg text-primary mb-3">
+                  Authorized & Certified
+                </h4>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1.5 rounded-full bg-accent/10 text-accent text-xs font-medium border border-accent/20">
+                    Reg. No.: SH-6061
+                  </span>
+                  <span className="px-3 py-1.5 rounded-full bg-accent/10 text-accent text-xs font-medium border border-accent/20">
+                    UDYAM: UDYAM-BR-29-0035052
+                  </span>
+                  <span className="px-3 py-1.5 rounded-full bg-accent/10 text-accent text-xs font-medium border border-accent/20">
+                    ISO 9001:2015 Certified
+                  </span>
+                </div>
               </div>
             </motion.div>
 

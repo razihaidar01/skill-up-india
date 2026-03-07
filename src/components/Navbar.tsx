@@ -14,6 +14,7 @@ const navLinks = [
   { name: "Gallery", nameHi: "गैलरी", href: "/gallery" },
   { name: "Contact", nameHi: "संपर्क", href: "/contact" },
   { name: "Verify", nameHi: "सत्यापन", href: "/verify" },
+  { name: "RH Software", nameHi: "आरएच सॉफ्टवेयर", href: "/rhsoftware" },
 ];
 
 export function Navbar() {
