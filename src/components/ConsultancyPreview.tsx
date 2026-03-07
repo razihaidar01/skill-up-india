@@ -83,10 +83,10 @@ export function ConsultancyPreview() {
             className="text-center"
           >
             <Link
-              to="/rhsoftware/consultancy"
+              to="/consultancy"
               className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-heading rounded-full px-8 py-3 shadow-md hover:shadow-lg transition-all"
             >
-              View All Certifications <ArrowRight className="h-4 w-4" />
+              View All Services <ArrowRight className="h-4 w-4" />
             </Link>
           </motion.div>
         </div>

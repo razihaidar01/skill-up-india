@@ -80,10 +80,6 @@ export function Navbar() {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-3">
-            <a href="tel:+917004216219" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
-              <Phone className="h-4 w-4" />
-              <span className="font-hindi">कॉल करें</span>
-            </a>
             <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground font-heading rounded-full px-6 shadow-md hover:shadow-lg transition-all">
               <Link to="/contact">Apply Now</Link>
             </Button>
